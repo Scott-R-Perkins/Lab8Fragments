@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lab8Fragments</string>
+    <string name="show_recipe">Show Recipe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Recipe Name</string>
+    <string name="recipe_description">Recipe description</string>
+</resources>
