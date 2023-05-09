@@ -2,6 +2,8 @@ package com.scottperkins.lab8fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -38,5 +40,17 @@ public class RecipeDetailFragment extends Fragment {
             TextView description = view.findViewById(R.id.textViewRecipeDescriptionID);
             description.setText(recipe.getDescription());
         }
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInsatnceState){
+        super.onCreate(savedInsatnceState);
+        if (savedInsatnceState != null) {
+            recipeId = savedInsatnceState.getLong("recipeId");
+        }
+    }
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState){
+        outState.putLong("recipeId", recipeId);
     }
 }
